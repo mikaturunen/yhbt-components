@@ -1,0 +1,29 @@
+{
+  "name": "yhbt-seed",
+  "version": "1.0.0",
+  "authors": [
+    "Mika Turunen <mika.turunen@ymail.com.com>"
+  ],
+  "description": "A good seeding element for all YHBT elements.",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "seed"
+  ],
+  "main": "seed-element.html",
+  "license": "MIT",
+  "homepage": "https://github.com/mikaturunen/yhbt-seed/",
+  "ignore": [
+    "/.*",
+    "/test/",
+    "/demo/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "^3.2.0"
+  }
+}
