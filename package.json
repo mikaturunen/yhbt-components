@@ -1,0 +1,29 @@
+{
+  "name": "yhbt-components",
+  "version": "0.0.1",
+  "description": "You Have Been Tasked! components repo for easier development",
+  "main": "gulpfile.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikaturunen/yhbt-components.git"
+  },
+  "keywords": [
+    "YHBT",
+    "components",
+    "webcomponents",
+    "polymer",
+    "YHBT-components"
+  ],
+  "author": "Mika Turunen <mika.turunen@ymail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikaturunen/yhbt-components/issues"
+  },
+  "homepage": "https://github.com/mikaturunen/yhbt-components",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-hub": "^0.7.1"
+  },
+  "devDependencies": {}
+}
