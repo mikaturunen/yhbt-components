@@ -2,7 +2,7 @@
   "jadeTaskName": "jade",
   "tsTaskName": "typescript",
   "lessTaskName": "less",
-  "defaultTask": "default"
+  "defaultTask": "default",
 
   "releaseLocation": "./release",
   "tmpLocation": "./tmp",

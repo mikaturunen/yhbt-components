@@ -1,0 +1,51 @@
+{
+    "version": "1.5.0-alpha",
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "noLib": false,
+        "preserveConstEnums": true,
+        "suppressImplicitAnyIndexErrors": true
+    },
+    "filesGlob": [
+        "./**/*.ts",
+        "!./node_modules/**/*.ts"
+    ],
+    "files": [
+        "./bower/yhbt-definitions/typedefinitions/bcrypt/bcrypt-tests.ts",
+        "./bower/yhbt-definitions/typedefinitions/bcrypt/bcrypt.d.ts",
+        "./bower/yhbt-definitions/typedefinitions/bluebird/bluebird.d.ts",
+        "./bower/yhbt-definitions/typedefinitions/body-parser/body-parser.d.ts",
+        "./bower/yhbt-definitions/typedefinitions/client.d.ts",
+        "./bower/yhbt-definitions/typedefinitions/cookie-parser/cookie-parser-tests.ts",
+        "./bower/yhbt-definitions/typedefinitions/cookie-parser/cookie-parser.d.ts",
+        "./bower/yhbt-definitions/typedefinitions/express-session/express-session-tests.ts",
+        "./bower/yhbt-definitions/typedefinitions/express-session/express-session.d.ts",
+        "./bower/yhbt-definitions/typedefinitions/express/express.d.ts",
+        "./bower/yhbt-definitions/typedefinitions/hapi/hapi.d.ts",
+        "./bower/yhbt-definitions/typedefinitions/merge-interfaces.d.ts",
+        "./bower/yhbt-definitions/typedefinitions/models.d.ts",
+        "./bower/yhbt-definitions/typedefinitions/mongodb/mongodb-tests.ts",
+        "./bower/yhbt-definitions/typedefinitions/mongodb/mongodb.d.ts",
+        "./bower/yhbt-definitions/typedefinitions/node/node.d.ts",
+        "./bower/yhbt-definitions/typedefinitions/passport-local/passport-local-tests.ts",
+        "./bower/yhbt-definitions/typedefinitions/passport-local/passport-local.d.ts",
+        "./bower/yhbt-definitions/typedefinitions/passport/passport-tests.ts",
+        "./bower/yhbt-definitions/typedefinitions/passport/passport.d.ts",
+        "./bower/yhbt-definitions/typedefinitions/polymer/polymer-tests.ts",
+        "./bower/yhbt-definitions/typedefinitions/polymer/polymer.app-router.d.ts",
+        "./bower/yhbt-definitions/typedefinitions/polymer/polymer.core-drawer-panel.d.ts",
+        "./bower/yhbt-definitions/typedefinitions/polymer/polymer.core-overlay.d.ts",
+        "./bower/yhbt-definitions/typedefinitions/polymer/polymer.core-selector.d.ts",
+        "./bower/yhbt-definitions/typedefinitions/polymer/polymer.d.ts",
+        "./bower/yhbt-definitions/typedefinitions/polymer/polymer.paper-dialog.d.ts",
+        "./bower/yhbt-definitions/typedefinitions/polymer/polymer.paper-toast.d.ts",
+        "./bower/yhbt-definitions/typedefinitions/q/Q-tests.ts",
+        "./bower/yhbt-definitions/typedefinitions/q/Q.d.ts",
+        "./bower/yhbt-definitions/typedefinitions/server.d.ts",
+        "./yhbt-header/yhbt-header.ts"
+    ]
+}

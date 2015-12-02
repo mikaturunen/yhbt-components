@@ -5,24 +5,13 @@
  */
 
 var gulp = require("gulp");
-var rename = require("gulp-rename");
 var ts = require("gulp-typescript");
 var eventStream = require("event-stream");
 var jade = require("gulp-jade");
-var path = require("path");
 var tslint = require("gulp-tslint");
-var install = require("gulp-install");
-var uglify = require("gulp-uglify");
-var sourcemaps = require("gulp-sourcemaps");
-var sequence = require("run-sequence");
-var browserify = require("browserify");
-var tsify = require("tsify");
-var source = require("vinyl-source-stream");
-var buffer = require("vinyl-buffer");
-var copy = require("gulp-copy");
+var sequence = require("run-sequence").use(gulp);
 var babel = require("gulp-babel");
-var rimraf = require("gulp-rimraf");
-var ignore = require("gulp-ignore");
+var path = require("path");
 
 // Load the shared constants among the gulp files
 var constants = require("../shared/gulp-common.json");
@@ -37,8 +26,10 @@ gulp.task(constants.jadeTaskName, function() {
 
 // TYPESCRIPT COMPILATION
 gulp.task(constants.tsTaskName, function() {
-    var tsc = gulp
-        .src( [ constants.clientDefinitions ].concat([ "./**/*.ts" ]) )
+    return gulp
+        .src( [
+            path.join("../", constants.clientDefinitions)
+        ].concat([ "./**/*.ts" ]) )
         // Pipe source to lint
         .pipe(tslint())
         .pipe(tslint.report("verbose"))
@@ -50,7 +41,7 @@ gulp.task(constants.tsTaskName, function() {
             noExternalResolve: false,
             removeComments: true,
             module: "commonjs",
-            target: "es6"
+            target: "es6",
             showErrors: true
         }))
         // Through babel (es6->es5)
@@ -58,9 +49,6 @@ gulp.task(constants.tsTaskName, function() {
             comments: false,
         }));
 
-    return eventStream.merge(
-        tsc.js.pipe(gulp.dest(constants.releaseLocation))
-    );
 });
 
 // LESS COMPILATION
