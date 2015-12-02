@@ -46,6 +46,7 @@
         "./bower/yhbt-definitions/typedefinitions/q/Q-tests.ts",
         "./bower/yhbt-definitions/typedefinitions/q/Q.d.ts",
         "./bower/yhbt-definitions/typedefinitions/server.d.ts",
-        "./yhbt-header/yhbt-header.ts"
+        "./yhbt-header/yhbt-header.ts",
+        "./yhbt-login-dialog/yhbt-login-dialog.ts"
     ]
 }

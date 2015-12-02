@@ -1,16 +1,5 @@
 "use strict";
 
-(() => {
-
-const defaultProperties = {
-    status: {
-        loggedIn: false,
-        user: {
-
-        }
-    }
-};
-
 Polymer({
     /** * What component we are attached to. */
     is: "polymer-login",
@@ -31,10 +20,14 @@ Polymer({
         /** {boolean} False when the user is not logged in, true when they have logged in. */
         status: {
             type: Object,
-            value: defaultProperties.status
-        },
-    },
+            value: {
+                loggedIn: false,
+                user: {
 
+                }
+            }
+        }
+    },
     logMetaInfo: function() {
         console.log(
             "Meta information for status:",
@@ -42,27 +35,15 @@ Polymer({
             this.status
         );
     },
-
-    /**
-     * Opens Login dialog.
-     */
     openLoginDialog: function() {
         this.$.LoginDialog.open();
         this.$.InputUserName.focus();
 
         console.log(this.loginRoute, this.logoutRoute);
     },
-
-    /**
-     * Opens Logout dialog.
-     */
     openLogoutDialog: function() {
         this.$.LogoutDialog.open();
     },
-
-    /**
-     * Attempts to login into the system through the provided REST route.
-     */
     tryLogin: function() {
         console.log("Attempting to login the user through route:", this.loginRoute);
 
@@ -72,24 +53,18 @@ Polymer({
         });
         this.$.TryLogin.generateRequest();
     },
-
-    /**
-     * Callback for the login errors.
-     * @param {Error} error Error details.
-     */
     handleError: function(error: any) {
         console.log("Error:", error);
         this.logMetaInfo();
     },
-
-    /**
-     * Callback for login reponse.
-     */
     loginResponse: function(result: any) {
         if (this.$.TryLogin.lastError || !this.$.TryLogin.lastResponse) {
             // Error, something went wrong.
             // TODO fix the property and set the correct message
-            this.status = defaultProperties.status;
+            this.status = {
+                loggedIn: false,
+                user: { }
+            };
             this.handleError({ message: "NUUU", callDetails: result });
             return;
         }
@@ -103,30 +78,33 @@ Polymer({
 
         this.fire("login", this.status);
     },
-
     tryLogout: function() {
         console.log("Attempting to logout the user through route:", this.logoutRoute);
         this.$.TryLogout.generateRequest();
     },
-
-    /**
-     * Callback for logout reponse.
-     */
     logoutResponse: function(result: any) {
         if (this.$.TryLogout.lastError || !this.$.TryLogout.lastResponse) {
             // Error, something went wrong.
             // TODO fix the property and set the correct message
-            this.status = defaultProperties.status;
+            this.status = {
+                loggedIn: false,
+                user: {
+
+                }
+            };
             this.handleError({ message: "NUUU", callDetails: result });
             return;
         }
 
-        this.status = defaultProperties.status;
+        this.status = {
+            loggedIn: false,
+            user: {
+
+            }
+        };
         this.$.LogoutDialog.close();
         this.logMetaInfo();
-        
+
         this.fire("logout", this.status);
     }
 });
-
-})();
