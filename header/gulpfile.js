@@ -24,6 +24,25 @@ var babel = require("gulp-babel");
 var rimraf = require("gulp-rimraf");
 var ignore = require("gulp-ignore");
 
+var jade = "jade";
+var ts = "typescript";
+var less = "less";
+var releaseLocation = "./release";
+
+// JADE COMPILATION
+gulp.task(jade, function() {
+    return gulp
+        .src("./**/*.jade")
+        .pipe(jade())
+        .pipe(gulp.dest(releaseLocation));
+});
+
+// LESS COMPILATION
+
+
+// TYPESCRIPT COMPILATION
+
+
 
 // Declaring some constants for use during the gulp build process. Mainly the locations of certain files and naming
 // conventions for more easier access later in the process.

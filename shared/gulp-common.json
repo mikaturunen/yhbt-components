@@ -1,0 +1,11 @@
+{
+  "jadeTaskName": "jade",
+  "tsTaskName": "typescript",
+  "lessTaskName": "less",
+  "defaultTask": "default"
+
+  "releaseLocation": "./release",
+  "tmpLocation": "./tmp",
+
+  "clientDefinitions": "bower/yhbt-definitions/typedefinitions/client.d.ts"
+}

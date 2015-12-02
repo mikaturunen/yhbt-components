@@ -29,9 +29,7 @@ var ignore = require("gulp-ignore");
 // conventions for more easier access later in the process.
 var fromDefinitelyTypedClient = [
     // Real location for the definitions
-    "bower/yhbt-definitions/typedefinitions/client.d.ts",
-    // Sub-repo location
-    "../yhbt-definitions/typedefinitions/client.d.ts"
+    "bower/yhbt-definitions/typedefinitions/client.d.ts"
 ];
 
 var typeDefinitionsClient = fromDefinitelyTypedClient
